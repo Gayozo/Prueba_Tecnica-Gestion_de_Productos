@@ -1,4 +1,4 @@
-package main.java.gestionproductos.persistencia_y_JDBC;
+package gestionproductos.persistencia_y_JDBC;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

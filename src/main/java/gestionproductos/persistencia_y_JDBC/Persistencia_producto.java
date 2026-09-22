@@ -1,6 +1,6 @@
-package main.java.gestionproductos.persistencia_y_JDBC;
+package gestionproductos.persistencia_y_JDBC;
 
-import main.java.gestionproductos.modelo.Producto;
+import gestionproductos.modelo.Producto;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

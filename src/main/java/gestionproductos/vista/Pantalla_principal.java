@@ -1,7 +1,7 @@
-package main.java.gestionproductos.vista;
+package gestionproductos.vista;
 
-import main.java.gestionproductos.modelo.Producto;
-import main.java.gestionproductos.persistencia_y_JDBC.Persistencia_producto;
+import gestionproductos.modelo.Producto;
+import gestionproductos.persistencia_y_JDBC.Persistencia_producto;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;

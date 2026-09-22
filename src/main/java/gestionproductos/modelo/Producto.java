@@ -1,4 +1,4 @@
-package main.java.gestionproductos.modelo;
+package gestionproductos.modelo;
 
 public class Producto {
 
