@@ -22,3 +22,21 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Archivos de compilación Maven
+target/
+*.class
+
+# Configuraciones de VS Code
+.vscode/
+
+# Configuraciones de otros IDEs (Eclipse / IntelliJ)
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+# Archivos de registro del sistema
+*.log
+.DS_Store
