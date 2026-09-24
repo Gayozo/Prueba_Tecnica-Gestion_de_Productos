@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Persistencia_producto {
 
-     // Caso 1: Registrar producto en la db.
+     // 1: Registrar producto en la db.
     public boolean insertar(Producto producto) throws SQLException {
         String sql = "INSERT INTO productos (codigo, nombre, categoria, precio, stock, estado) VALUES (?, ?, ?, ?, ?, ?)";
 
@@ -29,7 +29,7 @@ public class Persistencia_producto {
         }
     }
 
-    // Caso 2: Listar todos los productos registrados.
+    // 2: Listar todos los productos registrados.
     public List<Producto> listarTodos() throws SQLException {
         List<Producto> lista = new ArrayList<>();
         String sql = "SELECT id, codigo, nombre, categoria, precio, stock, estado FROM productos ORDER BY id ASC";
@@ -45,7 +45,7 @@ public class Persistencia_producto {
         return lista;
     }
 
-    // Caso 3: Buscar productos por código o por nombre (coincidencia parcial no es sensible a mayúsculas).
+    // 3: Buscar productos por código o por nombre (coincidencia parcial no es sensible a mayúsculas).
     public List<Producto> buscarPorCodigoONombre(String criterio) throws SQLException {
         List<Producto> lista = new ArrayList<>();
         String sql = "SELECT id, codigo, nombre, categoria, precio, stock, estado FROM productos " +
@@ -67,7 +67,7 @@ public class Persistencia_producto {
         return lista;
     }
 
-    // Caso 5: Modificar datos de un producto existente.
+    // 5: Modificar datos de un producto existente.
     public boolean actualizar(Producto producto) throws SQLException {
         String sql = "UPDATE productos SET codigo = ?, nombre = ?, categoria = ?, precio = ?, stock = ?, estado = ? WHERE id = ?";
 
@@ -86,7 +86,7 @@ public class Persistencia_producto {
         }
     }
 
-    // Caso 6: Eliminar un producto por ID.
+    // 6: Eliminar un producto por ID.
     public boolean eliminar(int id) throws SQLException {
         String sql = "DELETE FROM productos WHERE id = ?";
 
@@ -98,7 +98,7 @@ public class Persistencia_producto {
         }
     }
 
-    // Caso 7: Consultar productos con cantidad disponible inferior al límite definido.
+    // 7: Consultar productos con cantidad disponible inferior al límite definido.
     public List<Producto> listarBajoStock(int limite) throws SQLException {
         List<Producto> lista = new ArrayList<>();
         String sql = "SELECT id, codigo, nombre, categoria, precio, stock, estado FROM productos WHERE stock < ? ORDER BY stock ASC";
@@ -117,7 +117,7 @@ public class Persistencia_producto {
         return lista;
     }
 
-    // Caso 8: Ajustar la cantidad disponible de un producto específico.
+    // 8: Ajustar la cantidad disponible de un producto específico.
     public boolean actualizarStock(int id, int nuevoStock) throws SQLException {
         String sql = "UPDATE productos SET stock = ? WHERE id = ?";
 
