@@ -14,7 +14,7 @@ public class Producto {
     public Producto() {
     }
 
-    // Constructor sin ID (para registrar nuevos productos antes de enviarlos a la DB)
+    // Constructor sin ID
     public Producto(String codigo, String nombre, String categoria, double precio, int stock, String estado) {
         this.codigo = codigo;
         this.nombre = nombre;
@@ -24,7 +24,7 @@ public class Producto {
         this.estado = estado;
     }
 
-    // Constructor completo (usado al momento de consultar los datos de la DB)
+    // Constructor completo
     public Producto(Integer id, String codigo, String nombre, String categoria, double precio, int stock, String estado) {
         this.id = id;
         this.codigo = codigo;
